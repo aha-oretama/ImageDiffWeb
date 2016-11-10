@@ -57,6 +57,12 @@
 			<artifactId>commons-compress</artifactId>
 			<version>1.12</version>
 		</dependency>
+		<!-- https://github.com/aha-oretama/KoboldWrapper -->
+		<dependency>
+			<groupId>aha-oretama.jp</groupId>
+			<artifactId>KoboldWrapper</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 
 		<!-- Mandatory dependencies for using Spock -->
 		<dependency>
@@ -103,5 +109,11 @@
 		</plugins>
 	</build>
 
+	<repositories>
+		<repository>
+			<id>aha-oretama.jp</id>
+			<url>https://raw.github.com/aha-oremama/KoboldWrapper/mvn-repo/</url>
+		</repository>
+	</repositories>
 
 </project>

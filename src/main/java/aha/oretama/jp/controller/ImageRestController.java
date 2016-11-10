@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.URI;
+
 @RestController
 public class ImageRestController {
 
@@ -25,4 +27,8 @@ public class ImageRestController {
     return imagesDownloadingService.downloadImagesFromZip(imageUrl);
   }
 
+  private URI createUri(String path) {
+
+    return URI.create("");
+  }
 }

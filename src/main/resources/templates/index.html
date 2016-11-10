@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Image Diff</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h2>追加された画像</h2>
+    <table>
+      <!--/*@thymesVar id="kobold" type="aha.oretama.jp.model.Kobold"*/-->
+      <tr th:each="addition : ${kobold.additions}">
+        <td>
+          <img th:src="${addition}" />
+        </td>
+      </tr>
+    </table>
+    <h2>削除された画像</h2>
+    <table>
+      <!--/*@thymesVar id="kobold" type="aha.oretama.jp.model.Kobold"*/-->
+      <tr th:each="orphan : ${kobold.orphans}">
+        <td>
+          <img th:src="${orphan}" />
+        </td>
+      </tr>
+    </table>
+    <h2>変更のあった画像</h2>
+    <table>
+      <!--/*@thymesVar id="kobold" type="aha.oretama.jp.model.Kobold"*/-->
+      <tr th:each="difference : ${kobold.differences}">
+        <td>
+          <img th:src="${difference}" />
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>
